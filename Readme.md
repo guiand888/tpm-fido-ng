@@ -1,3 +1,5 @@
+> This is a community-driven fork of the original WebAuthn/U2F token project, now actively maintained and updated. All dependencies are patched to their latest secure versions, outstanding pull requests are integrated, and the codebase is regularly reviewed for security and compatibility. The goal is to provide a reliable, up-to-date implementation of a TPM-protected WebAuthn/U2F token for modern Linux systems.
+
 # tpm-fido
 
 tpm-fido is FIDO token implementation for Linux that protects the token keys by using your system's TPM. tpm-fido uses Linux's [uhid](https://github.com/psanford/uhid) facility to emulate a USB HID device so that it is properly detected by browsers.
