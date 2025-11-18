@@ -1,4 +1,4 @@
-> This is a community-driven fork of the original WebAuthn/U2F token project, now actively maintained and updated. All dependencies are patched to their latest secure versions, outstanding pull requests are integrated, and the codebase is regularly reviewed for security and compatibility. The goal is to provide a reliable, up-to-date implementation of a TPM-protected WebAuthn/U2F token for modern Linux systems.
+# This is a community-driven fork of the original WebAuthn/U2F token project, now actively maintained and updated. All dependencies are patched to their latest secure versions, outstanding pull requests are integrated, and the codebase is regularly reviewed for security and compatibility. The goal is to provide a reliable, up-to-date implementation of a TPM-protected WebAuthn/U2F token for modern Linux systems.
 
 # tpm-fido
 
@@ -25,6 +25,8 @@ tpm-fido has been tested to work with Chrome and Firefox on Linux.
 go build
 ```
 
+**Requirements**: Go 1.22 or later
+
 ## Running
 
 In order to run `tpm-fido` you will need permission to access `/dev/tpmrm0`. On Ubuntu and Arch, you can add your user to the `tss` group.
@@ -49,3 +51,19 @@ Note: do not run with `sudo` or as root, as it will not work.
 ## Dependencies
 
 tpm-fido requires `pinentry` to be available on the system. If you have gpg installed you most likely already have `pinentry`.
+
+## Cloning with Internal Standards
+
+This repository includes a private `dev/` Git submodule containing internal development standards and AI rules. To clone the full repository including this submodule:
+
+```bash
+git clone --recurse-submodules <repository-url>
+```
+
+If you've already cloned without the submodule, initialize it with:
+
+```bash
+git submodule update --init --recursive
+```
+
+For more information about the dev submodule, see [`dev/README.md`](dev/README.md) and [`dev/SETUP.md`](dev/SETUP.md).

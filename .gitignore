@@ -1,0 +1,37 @@
+# Nextcloud sync artifacts
+.nextcloudsync.log
+.sync-exclude.lst
+.sync_*.db
+.sync_*.db-shm
+.sync_*.db-wal
+
+# Kilo Code symlinks (governance in dev/ submodule)
+.kilocode
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
